@@ -12,10 +12,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlite-repl-prerun:plugin',
   autoStart: true,
   optional: [IConsoleTracker],
-  activate: (
-    app: JupyterFrontEnd,
-    tracker: IConsoleTracker | null
-  ) => {
+  activate: (app: JupyterFrontEnd, tracker: IConsoleTracker | null) => {
     if (!tracker) {
       return;
     }
@@ -25,7 +22,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     tracker.widgetAdded.connect(async (_, widget) => {
       const { console } = widget;
-      
+
       if (prerun[0]) {
         await console.sessionContext.ready;
         prerun.forEach(line =>
