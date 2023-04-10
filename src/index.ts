@@ -19,6 +19,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const search = window.location.search;
     const urlParams = new URLSearchParams(search);
     const prerun = urlParams.getAll('prerun');
+    const prerunCode = urlParams.getAll('prerun-code');
 
     tracker.widgetAdded.connect(async (_, widget) => {
       const { console } = widget;
@@ -32,6 +33,11 @@ const plugin: JupyterFrontEndPlugin<void> = {
             store_history: false
           })
         );
+      }
+
+      if (prerunCode) {
+        await console.sessionContext.ready;
+        prerunCode.forEach(line => console.inject(line));
       }
     });
   }
