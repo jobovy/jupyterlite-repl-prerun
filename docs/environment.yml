@@ -1,4 +1,4 @@
-name: jupyterlab-open-url-parameter
+name: jupyterlite-repl-prerun
 channels:
 - conda-forge
 dependencies:
