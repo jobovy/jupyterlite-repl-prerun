@@ -1,6 +1,6 @@
 {
   "name": "jupyterlite-repl-prerun",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Jupyterlite extension to allow code to be pre-run in the repl app",
   "keywords": [
     "jupyter",

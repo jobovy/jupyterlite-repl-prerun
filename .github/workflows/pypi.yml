@@ -1,0 +1,28 @@
+name: Upload to PyPI
+
+# Publish to PyPI automatically upon creating a tag
+on:
+# See https://github.com/actions/runner/issues/1007 for running only upon tag
+  create:
+
+jobs:
+  deploy_pypi:
+    name: Deploy to PyPI
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref,'refs/tags/v')}}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Base Setup
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+      - name: Install dependencies
+        run: python -m pip install -U jupyterlab~=3.1
+      - name: Package the extension
+        run: |
+          set -eux
+          pip install build
+          python -m build      
+      - name: Publish distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.pypi_token }}
+          packages_dir: dist/
