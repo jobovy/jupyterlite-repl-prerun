@@ -46,10 +46,9 @@ CODE_FROM_PRERUN_DOT_PY=$(python -c "import urllib.parse; f= open('prerun.py','r
 
 ## Use in your own JupyterLite deployment
 
-You can add this extension to your own JupyterLite deployment by installing 
+You can add this extension to your own JupyterLite deployment by installing
 the extension into the environment you are using to build the JupyterLite
 deployment. Look at the [JupyterLite documentation on adding extensions](https://jupyterlite.readthedocs.io/en/latest/howto/configure/simple_extensions.html).
-
 
 ## Uninstall
 
