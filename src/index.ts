@@ -33,11 +33,11 @@ const plugin: JupyterFrontEndPlugin<void> = {
             store_history: false
           })
         );
+      }
 
       if (prerunCode) {
-          await console.sessionContext.ready;
-          prerunCode.forEach(line => console.inject(line));
-        }  
+        await console.sessionContext.ready;
+        prerunCode.forEach(line => console.inject(line));
       }
     });
   }
