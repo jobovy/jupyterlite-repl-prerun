@@ -1,7 +1,7 @@
 # jupyterlite-repl-prerun
 
 [![Github Actions Status](https://github.com/jobovy/jupyterlite-repl-prerun/workflows/Build/badge.svg)](https://github.com/jobovy/jupyterlite-repl-prerun/actions/workflows/build.yml)
-[![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge-launch.svg)](<https://jupyterlite-repl-prerun.org.readthedocs.build/en/latest/lite/repl/index.html?kernel=python&prerun=import%20numpy%20as%20np&prerun-code=print(np.pi)>)
+[![JupyterLite](https://jupyterlite.rtfd.io/en/latest/_static/badge-launch.svg)](<https://jupyterlite-repl-prerun.rtfd.io/en/latest/lite/repl/index.html?kernel=python&prerun=import%20numpy%20as%20np&prerun-code=print(np.pi)>)
 
 Jupyterlite extension to allow code to be pre-run in the repl app
 
@@ -26,7 +26,7 @@ Example:
 
 ```html
 <iframe
-  src="https://jupyterlite-repl-prerun.org.readthedocs.build/en/latest/lite/repl/index.html?kernel=python&prerun=import%20numpy%20as%20np&prerun-code=print(np.pi)"
+  src="https://jupyterlite-repl-prerun.rtfd.io/en/latest/lite/repl/index.html?kernel=python&prerun=import%20numpy%20as%20np&prerun-code=print(np.pi)"
   width="100%"
   height="100%"
 ></iframe>
