@@ -19,8 +19,7 @@ pip install jupyterlite_repl_prerun
 
 ## Usage
 
-JupyterLite allows you to [embed a live REPL](https://jupyterlite.readthedocs.io/en/latest/quickstart/embed-repl.html) in a webpage. This extension allows you to specify code that should be pre-run in the REPL. For example, when using the `pyodide` kernel, you can use this extension to install a package
-not included by default in `pyodide` or to set configuration variables.
+JupyterLite allows you to [embed a live REPL](https://jupyterlite.readthedocs.io/en/latest/quickstart/embed-repl.html) in a webpage. This extension allows you to specify code that should be pre-run in the REPL using the `prerun` URL parameter. For example, when using the `pyodide` kernel, you can use this extension to install a package not included by default in `pyodide` or to set configuration variables.
 
 Example:
 
@@ -34,8 +33,7 @@ Example:
 
 To launch this example, click the JupyterLite badge at the top of this page.
 
-Note that if you also want to include code to be displayed and run in the REPL, you can use the `prerun-code` parameter. For example, the URL above will pre-run the code to import `numpy` and then display and run the code to print `pi`. `prerun-code` replaces the usual JupyterLite `code` parameter, which
-cannot be combined with `prerun`.
+Note that if you also want to include code to be displayed and run in the REPL, you can use the `prerun-code` URL parameter. For example, the URL above will pre-run the code to import `numpy` and then display and run the code to print `pi`. `prerun-code` replaces the usual JupyterLite `code` parameter, which cannot be combined with `prerun`.
 
 To encode a, potentially multi-line, string in a URL, you can use an online
 [URL encoder](https://www.urlencoder.org/). Or you can use the `urllib.parse.quote` function in Python. For example, assuming that the code you want to pre-run is in a file `prerun.py`, you can use the following command to encode the contents of the file:
