@@ -1,4 +1,4 @@
-name: Wheel builder and uploader
+name: Upload to PyPI
 
 # Publish to PyPI automatically upon creating a tag
 on:
